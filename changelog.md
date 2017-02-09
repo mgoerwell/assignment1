@@ -9,6 +9,7 @@ ex: JF: added robot images to the assets folder
 ## [Unreleased]
 ### Added
 - JF: created change log
+- MG: added robot part images inside the new data folder in public
 
 ### Changed
 - 
