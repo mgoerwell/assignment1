@@ -8,6 +8,7 @@ ex: JF: added robot images to the assets folder
 
 ## [Unreleased]
 ### Added
+- AR: added history model
 - AR: added template for views, added _menubar and brand logo
 - MG: added robot part images inside the new data folder in public
 - JF: created change log
