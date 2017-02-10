@@ -8,6 +8,8 @@ ex: JF: added robot images to the assets folder
 
 ## [Unreleased]
 ### Added
+
+- AR: added history model
 - AZ: Added a Robots.php model in the models folder. Contains each robot model ID, the part ID's that make up each robot as well as the robots type. Closes #13
 - AR: added template for views, added _menubar and brand logo
 - MG: added robot part images inside the new data folder in public
