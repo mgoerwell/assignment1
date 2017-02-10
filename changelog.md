@@ -8,8 +8,11 @@ ex: JF: added robot images to the assets folder
 
 ## [Unreleased]
 ### Added
-- JF: created change log
+- AR: added template for views, added _menubar and brand logo
 - MG: added robot part images inside the new data folder in public
+- JF: created change log
+
 
 ### Changed
-- 
+- AR: changed base controler (config), MY_Controller, added Welcome constructor and base view template
+- AR: moved MG's last change log add up. We are using a newest first order.
