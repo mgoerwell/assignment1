@@ -17,7 +17,6 @@
 				</div>
             </div>           
             <div id="content">
-                <h1>{pagetitle}</h1>
                 {content}
             </div>
 			<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. 

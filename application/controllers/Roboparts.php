@@ -23,8 +23,9 @@ class Roboparts extends Application
         $parts = array();
         foreach ($source as $record)
 		{
-			$parts[] = array ('what' => $record['what'], 'pic' => $record['pic'], 'href' => $record['where']);
+			$parts[] = array ('model' => $record['model'], 'line' => $record['line'], 'pic' => $record['pic'], 'href' => $record['where']);
 		}
+        
         $this->data['parts'] = $parts;
         
 		$this->render(); 
