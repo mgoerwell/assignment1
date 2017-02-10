@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // the menu basics (text navbar)
 $config['menu_choices'] = array(
     'menudata' => array(
-		array('name' => '<img src="/data/logo.png"/>', 'link' => '/'),
+		array('name' => '<img src="/data/raspberry_logo.png"/>', 'link' => '/'),
         array('name' => 'Parts', 'link' => '/parts'),
 		array('name' => 'Assembly', 'link' => '/assembly'),
 		array('name' => 'History', 'link' => '/history'),

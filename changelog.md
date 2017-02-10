@@ -14,5 +14,6 @@ ex: JF: added robot images to the assets folder
 
 
 ### Changed
+- JF: Updated logo
 - AR: changed base controler (config), MY_Controller, added Welcome constructor and base view template
 - AR: moved MG's last change log add up. We are using a newest first order.

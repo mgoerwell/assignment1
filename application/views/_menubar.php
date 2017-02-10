@@ -4,7 +4,7 @@
 		margin: 0;
 		padding: 0;
 		overflow: hidden;
-		background-color: #555;
+		background-color: #000;
 	}
 
 	li {
