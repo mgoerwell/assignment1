@@ -8,6 +8,7 @@ ex: JF: added robot images to the assets folder
 
 ## [Unreleased]
 ### Added
+- AR: added history view and controller
 
 - AZ: Added Controller Robot.php, view robots.php, CSS doc assembly.css, and bots folder with pictures to the /data folder
 - MG: added handling for parts subpages (routing is currently limited to part a1 as demo)
@@ -20,7 +21,8 @@ ex: JF: added robot images to the assets folder
 
 
 ### Changed
-
+- AR: update history model, took cost out of assembled transactions
+- AR: added comments to menubar and template views
 - AZ: edited routes.php to route to assembly page. Added comments to Robots.php
 - MG: Parts controller updated to handle subpages, test routing done, comments added
 - MG: Updated css to improve parts view, updated model in prep for next issue.
@@ -29,3 +31,4 @@ ex: JF: added robot images to the assets folder
 - JF: Updated logo
 - AR: changed base controler (config), MY_Controller, added Welcome constructor and base view template
 - AR: moved MG's last change log add up. We are using a newest first order.
+

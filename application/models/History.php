@@ -1,22 +1,30 @@
+<!-- Author: Aing Ragunathan
+	This file includes all the data required by the history page.
+	 -->
+
 <?php
 
 class History extends CI_Model {
 
+	// create an array to hold data for a History object
 	var $data = array(
+		// add transactions with date, type, data, assembly type,
+		// location sold to or built in, cost to build and the 
+		// price sold for.
 		array('id' => '1', 	'date' => '15:00 13/1/2017', 
-							'type' => 'purchase'
+							'type' => 'purchase',
 							'data' => 'Box of parts',
 							'assembly' => '',
 							'location' => 'Seattle, US',
-							'cost' => 0,
-							'price' => 100),
+							'cost' => 100,
+							'price' => 0),
 
 		array('id' => '2', 	'date' => '13:00 14/1/2017', 
 							'type' => 'assembly',
 							'data' => 'A',
 							'assembly' => 'full',
 							'location' => 'Vancouver, Canada',
-							'cost' => 30,
+							'cost' => 0,
 							'price' => 0),
 		
 		array('id' => '3', 	'date' => '7:00 15/1/2017', 
@@ -32,7 +40,7 @@ class History extends CI_Model {
 							'assembly' => 'full',
 							'location' => 'Vancouver, Canada',
 							'data' => 'M',
-							'cost' => 30,
+							'cost' => 0,
 							'price' => 0),
 
 		array('id' => '5', 	'date' => '8:30 15/1/2017', 
@@ -40,7 +48,7 @@ class History extends CI_Model {
 							'assembly' => 'full',
 							'location' => 'Vancouver, Canada',
 							'data' => 'B',
-							'cost' => 30,
+							'cost' => 0,
 							'price' => 0),
 
 		array('id' => '6', 	'date' => '10:00 16/1/2017',
@@ -52,13 +60,13 @@ class History extends CI_Model {
 							'price' => 100),
 
 		array('id' => '7', 	'date' => '11:00 17/1/2017', 
-							'type' => 'purchase'
+							'type' => 'purchase',
 							'assembly' => '',
 							'location' => 'Shanghai, China',
 							'data' => 'Box of parts',
 							'price' => '$100',
-							'cost' => 0,
-							'price' => 100),
+							'cost' => 100,
+							'price' => 0),
 
 		array('id' => '8', 	'date' => '11:00 20/1/2017',
 							'type' => 'shipment', 
@@ -73,7 +81,7 @@ class History extends CI_Model {
 							'assembly' => '',
 							'location' => 'Vancouver, Canada',
 							'data' => 'motley',
-							'cost' => 30,
+							'cost' => 0,
 							'price' => 0),
 
 		array('id' => '10',	'date' => '14:00 21/1/2017', 
@@ -83,22 +91,21 @@ class History extends CI_Model {
 							'cost' => 0,
 							'price' => 25),
 
-		//buy 10 ==> 18 inventory
 		array('id' => '11', 'date' => '11:00 17/1/2017', 
-							'type' => 'purchase'
+							'type' => 'purchase',
 							'assembly' => '',
 							'location' => 'Shanghai, China',
 							'data' => 'Box of parts',
 							'price' => '$100',
-							'cost' => 0,
-							'price' => 100),
+							'cost' => 100,
+							'price' => 0),
 
 		array('id' => '12', 'date' => '13:00 20/1/2017', 
 							'type' => 'assembly',
 							'assembly' => 'full',
 							'location' => 'Vancouver, Canada',
 							'data' => 'R',
-							'cost' => 30,
+							'cost' => 0,
 							'price' => 0),
 		
 		array('id' => '13', 'date' => '13:00 20/1/2017', 
@@ -106,7 +113,7 @@ class History extends CI_Model {
 							'assembly' => 'mix',
 							'location' => 'Vancouver, Canada',
 							'data' => 'M',
-							'cost' => 30,
+							'cost' => 0,
 							'price' => 0),
 		
 		array('id' => '14', 'date' => '13:00 20/1/2017', 
@@ -114,7 +121,7 @@ class History extends CI_Model {
 							'assembly' => 'mix',
 							'location' => 'Vancouver, Canada',
 							'data' => 'C',
-							'cost' => 30,
+							'cost' => 0,
 							'price' => 0),
 
 		array('id' => '15',	'date' => '11:00 20/1/2017', 
@@ -138,7 +145,7 @@ class History extends CI_Model {
 							'assembly' => 'mix',
 							'location' => 'Vancouver, Canada',
 							'data' => 'B',
-							'cost' => 30,
+							'cost' => 0,
 							'price' => 0),
 		
 		array('id' => '18',	'date' => '13:00 20/1/2017',
@@ -146,7 +153,7 @@ class History extends CI_Model {
 							'assembly' => 'full',
 							'location' => 'Vancouver, Canada',
 							'data' => 'A',
-							'cost' => 30,
+							'cost' => 0,
 							'price' => 0),
 		
 		array('id' => '19',	'date' => '13:00 20/1/2017', 
@@ -154,7 +161,7 @@ class History extends CI_Model {
 							'assembly' => 'full',
 							'location' => 'Vancouver, Canada',
 							'data' => 'W',
-							'cost' => 30,
+							'cost' => 0,
 							'price' => 0),
 
 		array('id' => '20',	'date' => '11:00 20/1/2017', 

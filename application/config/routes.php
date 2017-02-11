@@ -54,4 +54,5 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['a1'] = 'roboparts/detail/1';
 $route['parts'] = 'roboparts';
+$route['history'] = 'ControllerHistory';
 $route['assembly'] = 'robot';
