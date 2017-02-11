@@ -1,10 +1,18 @@
+<!-- Author: Aing Ragunathan
+	This file includes all the data required by the history page.
+	 -->
+
 <?php
 
 class History extends CI_Model {
 
+	// create an array to hold data for a History object
 	var $data = array(
+		// add transactions with date, type, data, assembly type,
+		// location sold to or built in, cost to build and the 
+		// price sold for.
 		array('id' => '1', 	'date' => '15:00 13/1/2017', 
-							'type' => 'purchase'
+							'type' => 'purchase',
 							'data' => 'Box of parts',
 							'assembly' => '',
 							'location' => 'Seattle, US',
@@ -52,7 +60,7 @@ class History extends CI_Model {
 							'price' => 100),
 
 		array('id' => '7', 	'date' => '11:00 17/1/2017', 
-							'type' => 'purchase'
+							'type' => 'purchase',
 							'assembly' => '',
 							'location' => 'Shanghai, China',
 							'data' => 'Box of parts',
@@ -83,9 +91,8 @@ class History extends CI_Model {
 							'cost' => 0,
 							'price' => 25),
 
-		//buy 10 ==> 18 inventory
 		array('id' => '11', 'date' => '11:00 17/1/2017', 
-							'type' => 'purchase'
+							'type' => 'purchase',
 							'assembly' => '',
 							'location' => 'Shanghai, China',
 							'data' => 'Box of parts',
