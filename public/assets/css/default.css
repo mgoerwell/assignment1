@@ -78,6 +78,10 @@ p.footer {
 	li a:hover {
 		background-color: #000;
 	}
+	
+	td {
+		padding: 10px;
+	}
     
 #footer {font-size: small; font-style:italic;text-align:center;}
 
