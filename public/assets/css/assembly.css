@@ -1,0 +1,41 @@
+/* This is the CSS styling for the assembly page */
+
+/* Author: Alex Zielinski */
+
+/* styling for the box that displays robots */
+.assemblyRobotItems{
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+/* styling for the box that displays robot parts */
+.assemblyPartItems{
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+/* styling for robot items`*/
+.robotItems{
+    display: inline-block;
+    white-space: normal;
+}
+
+/* styling for parts items */
+.partItems{
+    display: inline-block;
+    white-space: normal;
+}
+
+/* align buttons to the right*/
+.assemblyButtons{
+	text-align: right;
+	padding-top: 20px;
+}
+
+/* styling for buttons*/
+button{
+	background-color: #008CBA; /* Blue */
+	font-size: 16px;
+	border-radius: 4px;
+	border: 2px solid #008CBA; /* Green */
+}
