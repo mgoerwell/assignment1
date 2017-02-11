@@ -21,6 +21,7 @@ ex: JF: added robot images to the assets folder
 
 
 ### Changed
+- AR: updated css and history view
 - AR: update history model, took cost out of assembled transactions
 - AR: added comments to menubar and template views
 - AZ: edited routes.php to route to assembly page. Added comments to Robots.php
