@@ -6,7 +6,7 @@ Formatting Requirements:
 2) First and last initial, followed by what was changed or added
 ex: JF: added robot images to the assets folder
 
-## [Unreleased]
+## [1.0]
 ### Added
 - JF: Added a welcome view and controller
 - AR: added history view and controller
