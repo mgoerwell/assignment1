@@ -7,8 +7,7 @@ $config['menu_choices'] = array(
 		array('name' => '<img src="/data/raspberry_logo.png"/>', 'link' => '/'),
         array('name' => 'Parts', 'link' => '/parts'),
 		array('name' => 'Assembly', 'link' => '/assembly'),
-		array('name' => 'History', 'link' => '/history'),
-		array('name' => 'About', 'link' => '/about')
+		array('name' => 'History', 'link' => '/history')
         )
     );
 
