@@ -18,6 +18,7 @@ ex: JF: added robot images to the assets folder
 
 
 ### Changed
+- AR: update history model, took cost out of assembled transactions
 - AR: added comments to menubar and template views
 - AR: update history model to include all types in every sub array
 - MG: Updated template to provide some code cleanup.
