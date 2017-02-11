@@ -18,6 +18,7 @@ ex: JF: added robot images to the assets folder
 
 
 ### Changed
+- MG: Updated css to improve parts view, updated model in prep for next issue.
 - MG: Updated template to provide some code cleanup.
 - JF: Updated logo
 - AR: changed base controler (config), MY_Controller, added Welcome constructor and base view template
