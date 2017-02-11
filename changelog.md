@@ -8,8 +8,8 @@ ex: JF: added robot images to the assets folder
 
 ## [Unreleased]
 ### Added
+- JF: Added a welcome view and controller
 - AR: added history view and controller
-
 - AZ: Added Controller Robot.php, view robots.php, CSS doc assembly.css, and bots folder with pictures to the /data folder
 - MG: added handling for parts subpages (routing is currently limited to part a1 as demo)
 - MG: added parts model, parts view, and parts controller
@@ -21,6 +21,7 @@ ex: JF: added robot images to the assets folder
 
 
 ### Changed
+- JF: Updated the config file to remove the 404 'about page' link
 - AR: updated css and history view
 - AR: update history model, took cost out of assembled transactions
 - AR: added comments to menubar and template views
