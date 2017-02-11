@@ -1,5 +1,12 @@
 <?php
 
+/**
+    This is the controller used to service the "worker" use case which is parts focused.
+    It maps to the parts model only.
+
+    @author Matt
+*/
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Roboparts extends Application
@@ -26,9 +33,23 @@ class Roboparts extends Application
 			$parts[] = array ('model' => $record['model'], 'line' => $record['line'], 'pic' => $record['pic'], 'href' => $record['where']);
 		}
         
+        //load parts into the page.
         $this->data['parts'] = $parts;
         
 		$this->render(); 
 	}
+    
+    public function detail($id) {
+        // this is the view we want shown
+		$this->data['pagebody'] = 'onepart';
+
+		// build the list of authors, to pass on to our view
+		$source = $this->parts->get($id);
+
+        //load part info into page.
+        $this->data = array_merge($this->data, $source);
+		$this->render();
+        
+    }
 
 }
