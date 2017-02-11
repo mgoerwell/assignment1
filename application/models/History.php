@@ -16,8 +16,8 @@ class History extends CI_Model {
 							'data' => 'Box of parts',
 							'assembly' => '',
 							'location' => 'Seattle, US',
-							'cost' => 0,
-							'price' => 100),
+							'cost' => 100,
+							'price' => 0),
 
 		array('id' => '2', 	'date' => '13:00 14/1/2017', 
 							'type' => 'assembly',
@@ -65,8 +65,8 @@ class History extends CI_Model {
 							'location' => 'Shanghai, China',
 							'data' => 'Box of parts',
 							'price' => '$100',
-							'cost' => 0,
-							'price' => 100),
+							'cost' => 100,
+							'price' => 0),
 
 		array('id' => '8', 	'date' => '11:00 20/1/2017',
 							'type' => 'shipment', 
@@ -97,8 +97,8 @@ class History extends CI_Model {
 							'location' => 'Shanghai, China',
 							'data' => 'Box of parts',
 							'price' => '$100',
-							'cost' => 0,
-							'price' => 100),
+							'cost' => 100,
+							'price' => 0),
 
 		array('id' => '12', 'date' => '13:00 20/1/2017', 
 							'type' => 'assembly',
