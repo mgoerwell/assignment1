@@ -80,4 +80,15 @@ p.footer {
 	}
     
 #footer {font-size: small; font-style:italic;text-align:center;}
-.row>div {margin-bottom:10px;}
+
+/*
+    Provides styling for the parts page
+    @author matt
+*/
+.partrow{
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+    column-gap: 40px;
+    min-width: 1000px;
+}
