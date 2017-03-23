@@ -8,6 +8,7 @@ ex: JF: added robot images to the assets folder
 
 ## [Unreleased]
 ### Added
+- MG: added default database schema to the /data folder
 - JF: Added a welcome view and controller
 - AR: added history view and controller
 - AZ: Added Controller Robot.php, view robots.php, CSS doc assembly.css, and bots folder with pictures to the /data folder
@@ -21,6 +22,7 @@ ex: JF: added robot images to the assets folder
 
 
 ### Changed
+- MG: updated config to load database. Make sure to include a Development folder
 - JF: Updated the config file to remove the 404 'about page' link
 - AR: updated css and history view
 - AR: update history model, took cost out of assembled transactions
