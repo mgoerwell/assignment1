@@ -53,3 +53,46 @@ p.footer {
 	border: 1px solid #D0D0D0;
 	box-shadow: 0 0 8px #D0D0D0;
 }
+
+#content {width:100%; margin-left:5% auto;margin-right:5% auto;}
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #000;
+	}
+
+	li {
+		float: left;
+	}
+
+	li a {
+		display: inline-block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+
+	li a:hover {
+		background-color: #000;
+	}
+	
+	td {
+		padding: 10px;
+	}
+    
+#footer {font-size: small; font-style:italic;text-align:center;}
+
+/*
+    Provides styling for the parts page
+    @author matt
+*/
+.partrow{
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+    column-gap: 40px;
+    min-width: 1000px;
+}
