@@ -22,7 +22,11 @@ ex: JF: added robot images to the assets folder
 
 
 ### Changed
+<<<<<<< HEAD
 - MG: updated config to load database.
+=======
+- MG: updated config to load database. Make sure to include a Development folder
+>>>>>>> b62c86a5648fe32896cfdd25f7132d081bc1c2ac
 - JF: Updated the config file to remove the 404 'about page' link
 - AR: updated css and history view
 - AR: update history model, took cost out of assembled transactions

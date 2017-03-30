@@ -3,7 +3,11 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
 -- Generation Time: Mar 23, 2017 at 11:05 PM
+=======
+-- Generation Time: Mar 30, 2017 at 11:38 PM
+>>>>>>> b62c86a5648fe32896cfdd25f7132d081bc1c2ac
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -29,6 +33,10 @@ SET time_zone = "+00:00";
 CREATE TABLE `history` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `date` date NOT NULL,
+<<<<<<< HEAD
+=======
+  `time` time NOT NULL,
+>>>>>>> b62c86a5648fe32896cfdd25f7132d081bc1c2ac
   `transaction_type` varchar(32) NOT NULL,
   `assembly` varchar(32) NOT NULL,
   `location` varchar(255) NOT NULL,
@@ -37,6 +45,38 @@ CREATE TABLE `history` (
   `item_data` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+<<<<<<< HEAD
+=======
+--
+-- Dumping data for table `history`
+--
+
+INSERT INTO `history` (`id`, `date`, `time`, `transaction_type`, `assembly`, `location`, `cost`, `revenue`, `item_data`) VALUES
+(1, '2017-01-13', '15:00:00', 'purchase', '', 'Seattle, US', 100, 0, 'part_box'),
+(2, '2017-01-14', '13:00:00', 'assembly', 'full', 'Vancouver, Canada', 0, 0, 'A'),
+(3, '2017-01-15', '07:00:00', 'shipment', 'full', 'Dhaka, Bangladesh', 0, 50, 'A'),
+(4, '2017-01-15', '15:00:00', 'assembly', 'full', 'Vancouver, Canada', 0, 0, 'M'),
+(5, '2017-01-15', '07:30:00', 'assembly', 'full', 'Vancouver, Canada', 0, 0, 'B'),
+(6, '2017-01-16', '10:00:00', 'shipment', 'full', 'Delhi, India', 0, 100, 'M'),
+(7, '2017-01-17', '11:00:00', 'purchase', '', 'Shanghai, China', 100, 0, 'part_box'),
+(8, '2017-01-20', '11:00:00', 'shipment', 'full', 'Calgary, Canada', 0, 50, 'B'),
+(9, '2017-01-20', '13:00:00', 'assembly', 'mix', 'Vancouver, Canada', 0, 0, 'motley'),
+(10, '2017-01-21', '14:00:00', 'shipment', 'mix', 'Moscow, Russia', 0, 25, 'motley'),
+(11, '2017-01-17', '11:00:00', 'purchase', '', 'Shanghai, China', 100, 0, 'part_box'),
+(12, '2017-01-20', '13:00:00', 'assembly', 'full', 'Vancouver, Canada', 0, 0, 'R'),
+(13, '2017-01-20', '13:00:00', 'assembly', 'mix', 'Vancouver, Canada', 0, 0, 'motley'),
+(14, '2017-01-20', '13:00:00', 'assembly', 'mix', 'Vancouver, Canada', 0, 0, 'companion'),
+(15, '2017-01-20', '13:00:00', 'shipment', 'full', 'London, England', 0, 50, 'R'),
+(16, '2017-01-20', '11:00:00', 'shipment', 'mix', 'Berlin, Germany', 0, 25, 'motley'),
+(17, '2017-01-20', '13:00:00', 'assembly', 'mix', 'Vancouver, Canada', 0, 0, 'butler'),
+(18, '2017-01-20', '13:00:00', 'assembly', 'full', 'Vancouver, Canada', 0, 0, 'A'),
+(19, '2017-01-20', '13:00:00', 'assembly', 'full', 'Vancouver, Canada', 0, 0, 'W'),
+(20, '2017-01-20', '11:00:00', 'shipment', 'mix', 'Toronto, Canada', 0, 100, 'companion'),
+(21, '2017-01-20', '11:00:00', 'shipment', 'mix', 'New York, US', 0, 50, 'butler'),
+(22, '2017-01-20', '11:00:00', 'shipment', 'full', 'Houston, US', 0, 50, 'A'),
+(23, '2017-01-20', '11:00:00', 'shipment', 'full', 'Venice, Italy', 0, 200, 'W');
+
+>>>>>>> b62c86a5648fe32896cfdd25f7132d081bc1c2ac
 -- --------------------------------------------------------
 
 --
@@ -52,6 +92,24 @@ CREATE TABLE `parts` (
   `available` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+<<<<<<< HEAD
+=======
+--
+-- Dumping data for table `parts`
+--
+
+INSERT INTO `parts` (`certificate`, `line_type`, `part_code`, `part_type`, `date_acquired`, `available`) VALUES
+('#234239', 'Butler', 'm3', 'feet', '2017-03-05', 0),
+('#234249', 'Butler', 'm2', 'torso', '2017-03-05', 0),
+('#234289', 'Butler', 'm1', 'head', '2017-03-05', 0),
+('#654616', 'Household', 'a3', 'feet', '2017-03-05', 1),
+('#754216', 'Household', 'a1', 'head', '2017-03-30', 1),
+('#754616', 'Household', 'a2', 'torso', '2017-03-05', 1),
+('#839221', 'Companion', 'w3', 'feet', '2017-03-05', 1),
+('#839281', 'Companion', 'w1', 'head', '2017-03-05', 1),
+('#839288', 'Companion', 'w2', 'torso', '2017-03-05', 1);
+
+>>>>>>> b62c86a5648fe32896cfdd25f7132d081bc1c2ac
 -- --------------------------------------------------------
 
 --
@@ -66,6 +124,16 @@ CREATE TABLE `robots` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+<<<<<<< HEAD
+=======
+-- Dumping data for table `robots`
+--
+
+INSERT INTO `robots` (`id`, `head_part`, `torso_part`, `leg_part`) VALUES
+(1, '#234289', '#234249', '#234239');
+
+--
+>>>>>>> b62c86a5648fe32896cfdd25f7132d081bc1c2ac
 -- Indexes for dumped tables
 --
 
@@ -97,12 +165,20 @@ ALTER TABLE `robots`
 -- AUTO_INCREMENT for table `history`
 --
 ALTER TABLE `history`
+<<<<<<< HEAD
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+=======
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+>>>>>>> b62c86a5648fe32896cfdd25f7132d081bc1c2ac
 --
 -- AUTO_INCREMENT for table `robots`
 --
 ALTER TABLE `robots`
+<<<<<<< HEAD
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+>>>>>>> b62c86a5648fe32896cfdd25f7132d081bc1c2ac
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
