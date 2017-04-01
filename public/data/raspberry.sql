@@ -3,11 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD
--- Generation Time: Mar 23, 2017 at 11:05 PM
-=======
--- Generation Time: Mar 30, 2017 at 11:38 PM
->>>>>>> b62c86a5648fe32896cfdd25f7132d081bc1c2ac
+-- Generation Time: Apr 02, 2017 at 12:21 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -33,10 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `history` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `date` date NOT NULL,
-<<<<<<< HEAD
-=======
   `time` time NOT NULL,
->>>>>>> b62c86a5648fe32896cfdd25f7132d081bc1c2ac
   `transaction_type` varchar(32) NOT NULL,
   `assembly` varchar(32) NOT NULL,
   `location` varchar(255) NOT NULL,
@@ -45,8 +38,6 @@ CREATE TABLE `history` (
   `item_data` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-<<<<<<< HEAD
-=======
 --
 -- Dumping data for table `history`
 --
@@ -76,7 +67,6 @@ INSERT INTO `history` (`id`, `date`, `time`, `transaction_type`, `assembly`, `lo
 (22, '2017-01-20', '11:00:00', 'shipment', 'full', 'Houston, US', 0, 50, 'A'),
 (23, '2017-01-20', '11:00:00', 'shipment', 'full', 'Venice, Italy', 0, 200, 'W');
 
->>>>>>> b62c86a5648fe32896cfdd25f7132d081bc1c2ac
 -- --------------------------------------------------------
 
 --
@@ -84,7 +74,7 @@ INSERT INTO `history` (`id`, `date`, `time`, `transaction_type`, `assembly`, `lo
 --
 
 CREATE TABLE `parts` (
-  `certificate` varchar(8) NOT NULL,
+  `certificate` int(8) NOT NULL,
   `line_type` varchar(10) NOT NULL,
   `part_code` varchar(2) NOT NULL,
   `part_type` varchar(5) NOT NULL,
@@ -92,24 +82,21 @@ CREATE TABLE `parts` (
   `available` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-<<<<<<< HEAD
-=======
 --
 -- Dumping data for table `parts`
 --
 
 INSERT INTO `parts` (`certificate`, `line_type`, `part_code`, `part_type`, `date_acquired`, `available`) VALUES
-('#234239', 'Butler', 'm3', 'feet', '2017-03-05', 0),
-('#234249', 'Butler', 'm2', 'torso', '2017-03-05', 0),
-('#234289', 'Butler', 'm1', 'head', '2017-03-05', 0),
-('#654616', 'Household', 'a3', 'feet', '2017-03-05', 1),
-('#754216', 'Household', 'a1', 'head', '2017-03-30', 1),
-('#754616', 'Household', 'a2', 'torso', '2017-03-05', 1),
-('#839221', 'Companion', 'w3', 'feet', '2017-03-05', 1),
-('#839281', 'Companion', 'w1', 'head', '2017-03-05', 1),
-('#839288', 'Companion', 'w2', 'torso', '2017-03-05', 1);
+(234239, 'Butler', 'm3', 'feet', '2017-03-05', 0),
+(234249, 'Butler', 'm2', 'torso', '2017-03-05', 0),
+(234289, 'Butler', 'm1', 'head', '2017-03-05', 0),
+(654616, 'Household', 'a3', 'feet', '2017-03-05', 1),
+(754216, 'Household', 'a1', 'head', '2017-03-30', 1),
+(754616, 'Household', 'a2', 'torso', '2017-03-05', 1),
+(839221, 'Companion', 'w3', 'feet', '2017-03-05', 1),
+(839281, 'Companion', 'w1', 'head', '2017-03-05', 1),
+(839288, 'Companion', 'w2', 'torso', '2017-03-05', 1);
 
->>>>>>> b62c86a5648fe32896cfdd25f7132d081bc1c2ac
 -- --------------------------------------------------------
 
 --
@@ -118,22 +105,19 @@ INSERT INTO `parts` (`certificate`, `line_type`, `part_code`, `part_type`, `date
 
 CREATE TABLE `robots` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `head_part` varchar(8) NOT NULL,
-  `torso_part` varchar(8) NOT NULL,
-  `leg_part` varchar(8) NOT NULL
+  `head_part` int(8) NOT NULL,
+  `torso_part` int(8) NOT NULL,
+  `leg_part` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
-<<<<<<< HEAD
-=======
 -- Dumping data for table `robots`
 --
 
 INSERT INTO `robots` (`id`, `head_part`, `torso_part`, `leg_part`) VALUES
-(1, '#234289', '#234249', '#234239');
+(1, 234289, 234249, 234239);
 
 --
->>>>>>> b62c86a5648fe32896cfdd25f7132d081bc1c2ac
 -- Indexes for dumped tables
 --
 
@@ -165,20 +149,12 @@ ALTER TABLE `robots`
 -- AUTO_INCREMENT for table `history`
 --
 ALTER TABLE `history`
-<<<<<<< HEAD
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-=======
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
->>>>>>> b62c86a5648fe32896cfdd25f7132d081bc1c2ac
 --
 -- AUTO_INCREMENT for table `robots`
 --
 ALTER TABLE `robots`
-<<<<<<< HEAD
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-=======
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
->>>>>>> b62c86a5648fe32896cfdd25f7132d081bc1c2ac
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -48,7 +48,7 @@ class Robot extends Application
 		// iterate thru each model array element and store values
         foreach ($source as $record)
 		{
-			$parts[] = array ('model' => $record['model'], 'line' => $record['line'], 'pic' => $record['pic'], 'href' => $record['where']);
+			$parts[] = array ('certificate' => $record['certificate'], 'line' => $record['line_type'], 'pic' => $record['part_code']);
 		}
         $this->data['parts'] = $parts;
 		

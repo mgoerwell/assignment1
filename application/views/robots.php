@@ -10,8 +10,7 @@
 <div class="assemblyRobotItems">
 	{robots}
 		<span class="robotItems">
-			<img src="data/bots/{pic}" width="200" title="Model: {model_ID}
-Type: {type}"/></a>
+			<img src="data/bots/{pic}" width="200"/></a>
 		<input type="checkbox" name="robotCheck">
 		</span>
 	{/robots}
@@ -22,7 +21,7 @@ Type: {type}"/></a>
 <div class="assemblyPartItems">
 	{parts}
         <span class="partItems">
-			<img src="/data/parts/{pic}" width="200" title="Model: {model}
+			<img src="/data/parts/{pic}.jpeg" width="200" title="Model: {certificate}
 Line: {line}"/></a>
 	<input type="checkbox" name="partCheck">
 	</span>
