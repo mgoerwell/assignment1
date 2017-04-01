@@ -24,6 +24,8 @@ class Robot extends Application
 	{
 		// link view
 		$this->data['pagebody'] = 'robots';
+		$role = $this->session->userdata('userrole');
+		$this->data['pagetitle'] = 'Robots ('. $role . ')';
 		
 		// call all() function from robots model
 		$source = $this->robots->all();
@@ -51,6 +53,44 @@ class Robot extends Application
 			$parts[] = array ('model' => $record['model'], 'line' => $record['line'], 'pic' => $record['pic'], 'href' => $record['where']);
 		}
         $this->data['parts'] = $parts;
+
+
+        $heads = array(); // array to store returned values
+		
+		// iterate thru each model array element and store values
+        foreach ($source as $record)
+		{
+			if ($record['type'] == 'head') {
+				$heads[] = array ('model' => $record['model'], 'line' => $record['line'], 'pic' => $record['pic'], 'href' => $record['where']);
+			}
+		}
+        $this->data['heads'] = $heads;
+
+
+        $bodies = array(); // array to store returned values
+		
+		// iterate thru each model array element and store values
+        foreach ($source as $record)
+		{
+			if ($record['type'] == 'body') {
+				$bodies[] = array ('model' => $record['model'], 'line' => $record['line'], 'pic' => $record['pic'], 'href' => $record['where']);
+			}
+		}
+        $this->data['bodies'] = $bodies;
+
+
+        $feet = array(); // array to store returned values
+		
+		// iterate thru each model array element and store values
+        foreach ($source as $record)
+		{
+			if ($record['type'] == 'feet') {
+				$feet[] = array ('model' => $record['model'], 'line' => $record['line'], 'pic' => $record['pic'], 'href' => $record['where']);
+			}
+		}
+        $this->data['feet'] = $feet;
+
+
 		
 		$this->render(); 
 	}

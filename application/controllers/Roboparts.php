@@ -24,6 +24,8 @@ class Roboparts extends Application
 	{
         //the view we want shown
 		$this->data['pagebody'] = 'parts';
+		$role = $this->session->userdata('userrole');
+		$this->data['pagetitle'] = 'Parts ('. $role . ')';
         
         //build the list of parts to pass on to the view.
         $source = $this->parts->all();

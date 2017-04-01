@@ -16,6 +16,7 @@ class Welcome extends Application
 	public function index()
 	{
 		$this->data['pagebody'] = 'welcome';
+		$role = $this->session->userdata('userrole');
 		$numparts = 0; //Number of parts in the inventory
 		$numbots = 0; //Number of robots currently on hand
 		$profits = 0; //Total profits made

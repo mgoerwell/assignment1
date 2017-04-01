@@ -1,4 +1,4 @@
-::selection { background-color: #E13300; color: white; }
+/*::selection { background-color: #E13300; color: white; }
 ::-moz-selection { background-color: #E13300; color: white; }
 
 body {
@@ -89,10 +89,10 @@ p.footer {
     Provides styling for the parts page
     @author matt
 */
-.partrow{
-    -webkit-column-count: 3; /* Chrome, Safari, Opera */
-    -moz-column-count: 3; /* Firefox */
-    column-count: 3;
+/*.partrow{
+    -webkit-column-count: 3;*/ /* Chrome, Safari, Opera */
+   /* -moz-column-count: 3;*/ /* Firefox */
+    /*column-count: 3;
     column-gap: 40px;
-    min-width: 1000px;
-}
+    min-width: 1000px;*/
+/*}*/
