@@ -22,6 +22,7 @@ ex: JF: added robot images to the assets folder
 
 
 ### Changed
+- MG: Updated the parts page to use the database. Ensured this didn't break the assembly page (needs to be reworked anyway). Updated database.
 - MG: updated config to load database. Make sure to include a Development folder
 - JF: Updated the config file to remove the 404 'about page' link
 - AR: updated css and history view

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 30, 2017 at 11:38 PM
+-- Generation Time: Apr 02, 2017 at 12:21 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -74,7 +74,7 @@ INSERT INTO `history` (`id`, `date`, `time`, `transaction_type`, `assembly`, `lo
 --
 
 CREATE TABLE `parts` (
-  `certificate` varchar(8) NOT NULL,
+  `certificate` int(8) NOT NULL,
   `line_type` varchar(10) NOT NULL,
   `part_code` varchar(2) NOT NULL,
   `part_type` varchar(5) NOT NULL,
@@ -87,15 +87,15 @@ CREATE TABLE `parts` (
 --
 
 INSERT INTO `parts` (`certificate`, `line_type`, `part_code`, `part_type`, `date_acquired`, `available`) VALUES
-('#234239', 'Butler', 'm3', 'feet', '2017-03-05', 0),
-('#234249', 'Butler', 'm2', 'torso', '2017-03-05', 0),
-('#234289', 'Butler', 'm1', 'head', '2017-03-05', 0),
-('#654616', 'Household', 'a3', 'feet', '2017-03-05', 1),
-('#754216', 'Household', 'a1', 'head', '2017-03-30', 1),
-('#754616', 'Household', 'a2', 'torso', '2017-03-05', 1),
-('#839221', 'Companion', 'w3', 'feet', '2017-03-05', 1),
-('#839281', 'Companion', 'w1', 'head', '2017-03-05', 1),
-('#839288', 'Companion', 'w2', 'torso', '2017-03-05', 1);
+(234239, 'Butler', 'm3', 'feet', '2017-03-05', 0),
+(234249, 'Butler', 'm2', 'torso', '2017-03-05', 0),
+(234289, 'Butler', 'm1', 'head', '2017-03-05', 0),
+(654616, 'Household', 'a3', 'feet', '2017-03-05', 1),
+(754216, 'Household', 'a1', 'head', '2017-03-30', 1),
+(754616, 'Household', 'a2', 'torso', '2017-03-05', 1),
+(839221, 'Companion', 'w3', 'feet', '2017-03-05', 1),
+(839281, 'Companion', 'w1', 'head', '2017-03-05', 1),
+(839288, 'Companion', 'w2', 'torso', '2017-03-05', 1);
 
 -- --------------------------------------------------------
 
@@ -105,9 +105,9 @@ INSERT INTO `parts` (`certificate`, `line_type`, `part_code`, `part_type`, `date
 
 CREATE TABLE `robots` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `head_part` varchar(8) NOT NULL,
-  `torso_part` varchar(8) NOT NULL,
-  `leg_part` varchar(8) NOT NULL
+  `head_part` int(8) NOT NULL,
+  `torso_part` int(8) NOT NULL,
+  `leg_part` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -115,7 +115,7 @@ CREATE TABLE `robots` (
 --
 
 INSERT INTO `robots` (`id`, `head_part`, `torso_part`, `leg_part`) VALUES
-(1, '#234289', '#234249', '#234239');
+(1, 234289, 234249, 234239);
 
 --
 -- Indexes for dumped tables

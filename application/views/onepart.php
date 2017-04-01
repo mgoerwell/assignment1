@@ -4,13 +4,13 @@
     @author Matt
 -->
 <div class="row">
-    <div class="span3"><img src="/data/parts/{pic}" title="{who}"/></div>
+    <div class="span3"><img src="/data/parts/{part_code}" title="{certificate}"/></div>
     <div class="span8 offset1">
-        <p class="text-right">Part Code: {code}<br/>
-        Associated Model: {model}<br/>
-        Associated Robot Type: {line}<br/>
-        Date Acquired: {Date Acquired}<br/>
-        Authenticity Code: {CA}</p><br/>
+        <p class="text-right">
+        Associated Model: {part_code}<br/>
+        Associated Robot Type: {line_type}<br/>
+        Date Acquired: {date_acquired}<br/>
+        Authenticity Code: {certificate}</p><br/>
     </div>
     <button onclick="location.href='/parts'" type="button">Back</button>
 </div>
