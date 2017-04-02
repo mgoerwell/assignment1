@@ -66,7 +66,7 @@
 	            <td>
 	            	<span class="headParts">
 						<img src="data/parts/head/{pic}.jpeg" width="200" title="Model: {model} Type: {line}"/></a>
-						<input type="checkbox" name="partCheck">
+						<input type="checkbox" name="head{certificate}">
 					</span>
 				</td>
 			{/heads}
@@ -88,7 +88,7 @@
 	            <td>
 	            	<span class="bodyParts">
 						<img src="data/parts/torso/{pic}.jpeg" width="200" title="Model: {model} Type: {line}"/></a>
-						<input type="checkbox" name="partCheck">
+						<input type="checkbox" name="torso{certificate}">
 					</span>
 				</td>
 			{/torsos}
@@ -110,7 +110,7 @@
 	            <td>
 	            	<span class="feetParts">
 						<img src="data/parts/feet/{pic}.jpeg" width="200" title="Model: {model} Type: {line}"/></a>
-						<input type="checkbox" name="partCheck">
+						<input type="checkbox" name="feet{certificate}">
 					</span>
 				</td>
 				{/feet}
@@ -121,6 +121,6 @@
 
 <!-- Defines the two buttons on the webpage -->
 <div class="assemblyButtons">
-	<input type="submit" class="btn btn-primary btn-lg" value="Build It">
-	<a href="#" class="btn btn-primary btn-lg" role="button">Return to Head Office</a>
+	<button onclick="location.href='assembled'" type="button" class = "btn-lg btn-primary">Assemble It</button>
+	<button onclick="location.href='returned'" type="button" class = "btn-lg btn-primary">Return to Head Office</button>
 </div>

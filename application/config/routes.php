@@ -56,3 +56,5 @@ $route['parts/(:num)'] = 'roboparts/detail/$1';
 $route['parts'] = 'roboparts';
 $route['history'] = 'ControllerHistory';
 $route['assembly'] = 'robot';
+$route['assembled'] = 'robot/createRobot';
+$route['returned'] = 'robot/returnToOffice';

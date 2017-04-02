@@ -41,4 +41,31 @@ class Robots extends CI_Model
         $data = $query->result_array();
 		return $data;
 	}
+	
+	/**
+		Adds a robot to the robot table of the database
+		given the 3 parts passed in
+	*/
+	public function addRobot()
+	{
+		echo '<script type="text/javascript">alert("Add robot function");</script>';
+	}
+	
+	/**
+		Remove parts passed in as parameters from the 
+		database parts table
+	*/
+	public function removeParts()
+	{
+		echo '<script type="text/javascript">alert("Return part function");</script>';
+	}
+	
+	/**
+	*	Update history table based on the robot being assembled 
+	*	(based on the the 3 parameters passed in)
+	*/
+	public function updateHistory()
+	{
+		echo '<script type="text/javascript">alert("Update History function");</script>';
+	}
 };
