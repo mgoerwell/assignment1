@@ -8,6 +8,7 @@ ex: JF: added robot images to the assets folder
 
 ## [1.0]
 ### Added
+- AR: added Manage Page, functionality not present
 - JF: Bootstrap to the project for easier styling
 - MG: added default database schema to the /data folder
 - JF: Added a welcome view and controller
