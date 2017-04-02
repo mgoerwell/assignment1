@@ -17,14 +17,37 @@
 	    </thead>
 	    <tbody>
 	        <tr>
-	        	{robots}
+	        	{assembledHeads}
 	            <td>
 	            	<span class="robotItems">
-						<img src="data/bots/{pic}" width="200" title="Model: {model_ID} Type: {type}"/></a>
-						<input type="checkbox" name="robotCheck">
+						<img src="data/parts/heads/{pic}.jpeg" width="200" title="Model: {model_ID} Type: {type}"/></a>
 					</span>
 				</td>
-				{/robots}
+				{/assembledHeads}
+        	</tr>
+        	
+	        <tr>
+	        	{assembledTorsos}
+	            <td>
+	            	<span class="robotItems">
+						<img src="data/parts/torsos/{pic}.jpeg" width="200" title="Model: {model_ID} Type: {type}"/></a>
+					</span>
+				</td>
+				{/assembledTorsos}
+        	</tr>
+	        <tr>
+	        	{assembledFeet}
+	            <td>
+	            	<span class="robotItems">
+						<img src="data/parts/feet/{pic}.jpeg" width="200" title="Model: {model_ID} Type: {type}"/></a>
+					</span>
+				</td>
+				{/assembledFeet}
+        	</tr>
+        	<tr>
+        		<td align="center">
+	        		<input type="checkbox" name="robotCheck">
+        		</td>
         	</tr>
     	</tbody>
 	</table>
@@ -42,7 +65,7 @@
 	        {heads}
 	            <td>
 	            	<span class="headParts">
-						<img src="data/parts/{pic}.jpeg" width="200" title="Model: {model_ID} Type: {type}"/></a>
+						<img src="data/parts/heads/{pic}.jpeg" width="200" title="Model: {model_ID} Type: {type}"/></a>
 						<input type="checkbox" name="partCheck">
 					</span>
 				</td>
@@ -64,7 +87,7 @@
 	        {torsos}
 	            <td>
 	            	<span class="bodyParts">
-						<img src="data/parts/{pic}.jpeg" width="200" title="Model: {model_ID} Type: {type}"/></a>
+						<img src="data/parts/torsos/{pic}.jpeg" width="200" title="Model: {model_ID} Type: {type}"/></a>
 						<input type="checkbox" name="partCheck">
 					</span>
 				</td>
@@ -86,7 +109,7 @@
 	        	{feet}
 	            <td>
 	            	<span class="feetParts">
-						<img src="data/parts/{pic}.jpeg" width="200" title="Model: {model_ID} Type: {type}"/></a>
+						<img src="data/parts/feet/{pic}.jpeg" width="200" title="Model: {model_ID} Type: {type}"/></a>
 						<input type="checkbox" name="partCheck">
 					</span>
 				</td>

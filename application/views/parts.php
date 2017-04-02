@@ -17,7 +17,7 @@
             <tr>
             {heads}
                 <td>
-                   <a href="/parts/{certificate}"><img src="/data/parts/{pic}.jpeg" title="Part number: {certificate} Line: {line}"/></a>
+                   <a href="/parts/{certificate}"><img src="/data/parts/heads/{pic}.jpeg" title="Part number: {certificate} Line: {line}"/></a>
                 </td>
             {/heads}
             </tr>
@@ -36,7 +36,7 @@
             <tr>
             {torsos}
                 <td>
-                   <a href="/parts/{certificate}"><img src="/data/parts/{pic}.jpeg" title="Part number: {certificate} Line: {line}"/></a>
+                   <a href="/parts/{certificate}"><img src="/data/parts/torsos/{pic}.jpeg" title="Part number: {certificate} Line: {line}"/></a>
                 </td>
             {/torsos}
             </tr>
@@ -55,7 +55,7 @@
             <tr>
             {feet}
                 <td>
-                   <a href="/parts/{certificate}"><img src="/data/parts/{pic}.jpeg" title="Part number: {certificate} Line: {line}"/></a>
+                   <a href="/parts/{certificate}"><img src="/data/parts/feet/{pic}.jpeg" title="Part number: {certificate} Line: {line}"/></a>
                 </td>
             {/feet}
             </tr>

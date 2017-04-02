@@ -23,6 +23,10 @@ ex: JF: added robot images to the assets folder
 
 
 ### Changed
+- JF: the logic in the assembly page view and controller for obtaining assembled robots
+- JF: the homepage page to use a database
+- JF: the assembly page to use a database
+- JF: the history page to use a database
 - JF: the history table to be more a robust table which allows for sorting and filtering results
 - JF: Pretty much everything to make it work with bootstrap rather than our original default.css file
 - MG: Updated the parts page to use the database. Ensured this didn't break the assembly page (needs to be reworked anyway). Updated database.

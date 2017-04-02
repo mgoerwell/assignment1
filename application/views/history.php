@@ -14,7 +14,7 @@ This file holds the formatting for the view output. -->
             <th>Data</th>
             <th>Location</th>
             <th>Cost</th>
-            <th>Price</th>
+            <th>Revenue</th>
         </tr>
     </thead>
     <tbody>
@@ -25,7 +25,7 @@ This file holds the formatting for the view output. -->
             <td>{data}</td>
             <td>{location}</td>
             <td>${cost}</td>
-            <td>${price}</td>
+            <td>${revenue}</td>
         </tr>
         {/history}
     </tbody>
