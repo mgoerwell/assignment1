@@ -8,6 +8,7 @@ ex: JF: added robot images to the assets folder
 
 ## [Unreleased]
 ### Added
+- JF: Bootstrap to the project for easier styling
 - MG: added default database schema to the /data folder
 - JF: Added a welcome view and controller
 - AR: added history view and controller
@@ -22,6 +23,7 @@ ex: JF: added robot images to the assets folder
 
 
 ### Changed
+- JF: Pretty much everything to make it work with bootstrap rather than our original default.css file
 - MG: Updated the parts page to use the database. Ensured this didn't break the assembly page (needs to be reworked anyway). Updated database.
 - MG: updated config to load database. Make sure to include a Development folder
 - JF: Updated the config file to remove the 404 'about page' link
