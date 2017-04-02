@@ -52,15 +52,15 @@ class Welcome extends Application
 
 		foreach ($source as $record)
 		{
-			$historicaldata[] = array ('type' => $record['type'], 'cost' => $record['cost'], 'price' => $record['price']);
+			$historicaldata[] = array ('type' => $record['transaction_type'], 'cost' => $record['cost'], 'revenue' => $record['revenue']);
 			
 			//Add all costs
-			if($record['type'] == 'purchase') {
+			if($record['transaction_type'] == 'purchase') {
 				$spent = $spent + $record['cost'];
 				
 			//add all profits
-			} else if($record['type'] == 'shipment') {
-				$profits = $profits + $record['price'];
+			} else if($record['transaction_type'] == 'shipment') {
+				$profits = $profits + $record['revenue'];
 			}
 		}
 

@@ -23,8 +23,13 @@ ex: JF: added robot images to the assets folder
 
 
 ### Changed
+- MG: updated the assembly page to fix the mouseover text, and ensure that only available parts are displayed in the parts section.
+- JF: the logic in the assembly page view and controller for obtaining assembled robots
+- JF: the homepage page to use a database
+- JF: the assembly page to use a database
+- JF: the history page to use a database
 - MG: Renamed folders for images to be the same as part_type in DB.
-- MG: The routing and template for individual parts pages to work properly. 
+- MG: The routing and template for individual parts pages to work properly.
 - JF: the history table to be more a robust table which allows for sorting and filtering results
 - JF: Pretty much everything to make it work with bootstrap rather than our original default.css file
 - MG: Updated the parts page to use the database. Ensured this didn't break the assembly page (needs to be reworked anyway). Updated database.

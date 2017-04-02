@@ -15,6 +15,11 @@ class Robot extends Application
 	{
 		parent::__construct();
 	}
+
+	public function compare_id($a, $b)
+	{
+		return $a['id'] < $b['id'];
+	}
 	
 	/**
 	 * Index Page for this controller.
@@ -25,44 +30,79 @@ class Robot extends Application
 		$this->data['pagebody'] = 'robots';
 		
 		// call all() function from robots model
-		$source = $this->robots->all();
+		$sourceRobots = $this->robots->all();
 		$robots = array(); // array to store returned values
 		
 		// iterate thru each model array element and store values
-		foreach ($source as $record)
+		foreach ($sourceRobots as $record)
 		{
-			$robots[] = array ('model_ID' => $record['model_ID'], 
-							   'head_ID' => $record['head_ID'], 
-							   'torso_ID' => $record['torso_ID'], 
-							   'bottom_ID' => $record['bottom_ID'], 
-							   'type' => $record['type'],
-							   'pic' => $record['pic']);
+			$robots[] = array ('model_ID' => $record['id'], 
+							   'head_ID' => $record['head_part'], 
+							   'torso_ID' => $record['torso_part'], 
+							   'bottom_ID' => $record['leg_part']);
 		}
 		$this->data['robots'] = $robots;
 		
 		// call all() function from parts model
-        $source = $this->parts->all();
+        $sourceParts = $this->parts->all();
         $parts = array(); // array to store returned values
         $heads = array();
         $torsos = array();
         $feet = array();
 		
 		// iterate thru each model array element and store values
-        foreach ($source as $record)
+        foreach ($sourceParts as $record)
 		{
+            if ($record['available'] == 0) {
+                continue;
+            }
+            $part = $record['part_code'];
 			if ($record['part_type'] == 'head') {
-				$heads[] = array ('certificate' => $record['certificate'], 'line' => $record['line_type'], 'pic' => $record['part_code']);
+				$heads[] = array ('certificate' => $record['certificate'], 'line' => $record['line_type'], 'pic' => $part, 'model' => strtoupper($part[0]));
 			} else if ($record['part_type'] == 'torso') {
-				$torsos[] = array ('certificate' => $record['certificate'], 'line' => $record['line_type'], 'pic' => $record['part_code']);
+				$torsos[] = array ('certificate' => $record['certificate'], 'line' => $record['line_type'], 'pic' => $part, 'model' => strtoupper($part[0]));
 			} else if ($record['part_type'] == 'feet') {
-				$feet[] = array ('certificate' => $record['certificate'], 'line' => $record['line_type'], 'pic' => $record['part_code']);
+				$feet[] = array ('certificate' => $record['certificate'], 'line' => $record['line_type'], 'pic' => $part, 'model' => strtoupper($part[0]));
 			}
-			$parts[] = array ('certificate' => $record['certificate'], 'line' => $record['line_type'], 'pic' => $record['part_code']);
 		}
-        $this->data['parts'] = $parts;
         $this->data['heads'] = $heads;
         $this->data['torsos'] = $torsos;
         $this->data['feet'] = $feet;
+
+
+        $assembledHeads = array();
+        $assembledTorsos = array();
+        $assembledFeet = array();
+
+        foreach ($sourceRobots as $robotRecord)
+		{
+			foreach ($sourceParts as $partRecord)
+			{
+                $part = $partRecord['part_code'];
+				if ($partRecord['certificate'] == $robotRecord['head_part']) {
+					$assembledHeads[] = array ('id' => $robotRecord['id'], 'line' => $partRecord['line_type'], 'pic' => $part, 'model' => strtoupper($part[0]));
+				}
+
+				if ($partRecord['certificate'] == $robotRecord['torso_part']) {
+					$assembledTorsos[] = array ('id' => $robotRecord['id'], 'line' => $partRecord['line_type'], 'pic' => $part, 'model' => strtoupper($part[0]));
+				}
+
+				if ($partRecord['certificate'] == $robotRecord['leg_part']) {
+					$assembledFeet[] = array ('id' => $robotRecord['id'], 'line' => $partRecord['line_type'], 'pic' => $part, 'model' => strtoupper($part[0]));
+				}
+			}
+		}
+
+		usort($assembledHeads, array($this, 'compare_id'));
+		usort($assembledTorsos, array($this, 'compare_id'));
+		usort($assembledFeet, array($this, 'compare_id'));
+
+
+		$this->data['assembledHeads'] = $assembledHeads;
+        $this->data['assembledTorsos'] = $assembledTorsos;
+        $this->data['assembledFeet'] = $assembledFeet;
+
+
 		
 		$this->render(); 
 	}
