@@ -76,5 +76,14 @@ class Roboparts extends Application
 		$this->render();
         
     }
-
+    
+    public function build_parts() {
+        
+        $this->index();
+    }
+    
+    public function box() {
+        
+        $this->index();
+    }
 }

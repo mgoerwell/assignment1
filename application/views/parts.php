@@ -61,3 +61,9 @@
         </tbody>
     </table>
 </div>
+
+<!---Defines the two buttons on the webpage -->
+<div class = "partsButtons">
+    <button onclick="location.href='/parts/build'" type="button" class = "btn-lg btn-primary">Build Parts</button>
+    <button onclick="location.href='/parts/box'" type="button" class = "btn-lg btn-primary">Buy More Parts</button>
+</div>

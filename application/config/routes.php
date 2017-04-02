@@ -52,6 +52,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['parts/box']  = 'roboparts/box';
+$route['parts/build']  = 'roboparts/build_parts';
 $route['parts/(:num)'] = 'roboparts/detail/$1';
 $route['parts'] = 'roboparts';
 $route['history'] = 'ControllerHistory';
