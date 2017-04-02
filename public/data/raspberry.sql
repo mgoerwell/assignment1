@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 02, 2017 at 12:21 AM
+-- Generation Time: Apr 03, 2017 at 12:37 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -74,11 +74,11 @@ INSERT INTO `history` (`id`, `date`, `time`, `transaction_type`, `assembly`, `lo
 --
 
 CREATE TABLE `parts` (
-  `certificate` int(8) NOT NULL,
+  `certificate` varchar(8) NOT NULL,
   `line_type` varchar(10) NOT NULL,
   `part_code` varchar(2) NOT NULL,
   `part_type` varchar(5) NOT NULL,
-  `date_acquired` date NOT NULL,
+  `date_acquired` datetime NOT NULL,
   `available` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -87,15 +87,15 @@ CREATE TABLE `parts` (
 --
 
 INSERT INTO `parts` (`certificate`, `line_type`, `part_code`, `part_type`, `date_acquired`, `available`) VALUES
-(234239, 'Butler', 'm3', 'feet', '2017-03-05', 0),
-(234249, 'Butler', 'm2', 'torso', '2017-03-05', 0),
-(234289, 'Butler', 'm1', 'head', '2017-03-05', 0),
-(654616, 'Household', 'a3', 'feet', '2017-03-05', 1),
-(754216, 'Household', 'a1', 'head', '2017-03-30', 1),
-(754616, 'Household', 'a2', 'torso', '2017-03-05', 1),
-(839221, 'Companion', 'w3', 'feet', '2017-03-05', 1),
-(839281, 'Companion', 'w1', 'head', '2017-03-05', 1),
-(839288, 'Companion', 'w2', 'torso', '2017-03-05', 1);
+('234239', 'Butler', 'm3', 'feet', '2017-03-05 00:00:00', 0),
+('234249', 'Butler', 'm2', 'torso', '2017-03-05 00:00:00', 0),
+('234289', 'Butler', 'm1', 'head', '2017-03-05 00:00:00', 0),
+('654616', 'Household', 'a3', 'feet', '2017-03-05 00:00:00', 1),
+('754216', 'Household', 'a1', 'head', '2017-03-30 00:00:00', 1),
+('754616', 'Household', 'a2', 'torso', '2017-03-05 00:00:00', 1),
+('839221', 'Companion', 'w3', 'feet', '2017-03-05 00:00:00', 1),
+('839281', 'Companion', 'w1', 'head', '2017-03-05 00:00:00', 1),
+('839288', 'Companion', 'w2', 'torso', '2017-03-05 00:00:00', 1);
 
 -- --------------------------------------------------------
 

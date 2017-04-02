@@ -78,12 +78,54 @@ class Roboparts extends Application
     }
     
     public function build_parts() {
-        
+        $myfile = fopen(__DIR__.'/../../public/data/key.txt','r');
+        $apikey = fread($myfile,32);
+        $siteAddress = 'https://umbrella.jlparry.com/work/mybuilds?key='.$apikey;
+        $response = file_get_contents($siteAddress);
+        $info = json_decode($response,true);
+        foreach ($info as $key => $value) {
+            $certificate = $value["id"];
+            $model = $value["model"];
+            $piece = $value["piece"];
+            $part_code = $model.$piece;
+            $part_type;
+            switch ($piece) {
+                case '1':
+                    $part_type = "head";
+                    break;                
+                case '2':
+                    $part_type = "torso";
+                    break;                
+                case '3':
+                    $part_type = "feet";
+                    break;
+            }
+            if ($model < "m") {
+                $line_type = "household";
+            } else if ($model < "w") {
+                $line_type = "butler";
+            } else {
+                $line_type = "companion";
+            }
+            $date_acquired = $value["stamp"];
+            
+            $data = array(
+            "certificate"     => $certificate,
+            "line_type"       => $line_type,
+            "part_code"       => $part_code,
+            "part_type"       => $part_type,
+            "date_acquired"   => $date_acquired,
+            "available"       => 1
+            );
+            
+            $this->parts->insert($data);
+        }
         $this->index();
     }
     
     public function box() {
-        
+        $key = file_get_contents('/data/key.txt');
+        $response = file_get_contents('https://umbrella.jlparry.com/work/buybox?key=' + $key);
         $this->index();
     }
 }

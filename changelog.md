@@ -23,6 +23,7 @@ ex: JF: added robot images to the assets folder
 
 
 ### Changed
+- MG: Implemented support for the build robots button through the api, updated database to reflect returned array. 
 - MG: updated the assembly page to fix the mouseover text, and ensure that only available parts are displayed in the parts section.
 - JF: the logic in the assembly page view and controller for obtaining assembled robots
 - JF: the homepage page to use a database

@@ -23,4 +23,7 @@ class Parts extends CI_Model {
 		return $data;
 	}
 
+    public function insert($data){
+        $this->db->insert('parts',$data);
+    }
 }
