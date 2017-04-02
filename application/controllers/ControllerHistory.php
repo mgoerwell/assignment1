@@ -21,6 +21,8 @@ class ControllerHistory extends Application
 	{
         //the view we want shown
 		$this->data['pagebody'] = 'history';
+		$role = $this->session->userdata('userrole');
+		$this->data['pagetitle'] = 'History ('. $role . ')';
         
         //create the list of logs
         $data = $this->history->all();
@@ -30,7 +32,7 @@ class ControllerHistory extends Application
 			//get the date, type, description, location, cost, and price of every entry.
 			$history[] = array ('date' => $record['date'], 'type' => $record['type'], 'data' => $record['data'], 'location' => $record['location'], 'cost' => $record['cost'], 'price' => $record['price']);
 		}
-        
+
         $this->data['history'] = $history;
         
 		$this->render(); 

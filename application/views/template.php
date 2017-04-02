@@ -13,7 +13,10 @@ Based off lab 4 Routes template
 		<title>{pagetitle}</title>
         <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" type="text/css" href="/assets/css/default.css"/>
+        <link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>   
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/css/default.css"/>
 	</head>
 	<body>
         <div id="container">
@@ -27,8 +30,16 @@ Based off lab 4 Routes template
             	<!--input the content information-->
                 {content}
             </div>
-			<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. 
-				{ci_version}</p>
+            <footer class="footer">
+	            <div class="Container text-center">
+					<p class="text-muted">Page rendered in <strong>{elapsed_time}</strong> seconds. {ci_version}</p>
+				</div>
+			</footer>
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
+        <script src="/assets/js/tableSort.js"></script>
 	</body>
 </html>

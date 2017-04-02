@@ -8,7 +8,6 @@
 */
 
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 class Robot extends Application
 {
 	// Constructor
@@ -44,13 +43,26 @@ class Robot extends Application
 		// call all() function from parts model
         $source = $this->parts->all();
         $parts = array(); // array to store returned values
+        $heads = array();
+        $torsos = array();
+        $feet = array();
 		
 		// iterate thru each model array element and store values
         foreach ($source as $record)
 		{
+			if ($record['part_type'] == 'head') {
+				$heads[] = array ('certificate' => $record['certificate'], 'line' => $record['line_type'], 'pic' => $record['part_code']);
+			} else if ($record['part_type'] == 'torso') {
+				$torsos[] = array ('certificate' => $record['certificate'], 'line' => $record['line_type'], 'pic' => $record['part_code']);
+			} else if ($record['part_type'] == 'feet') {
+				$feet[] = array ('certificate' => $record['certificate'], 'line' => $record['line_type'], 'pic' => $record['part_code']);
+			}
 			$parts[] = array ('certificate' => $record['certificate'], 'line' => $record['line_type'], 'pic' => $record['part_code']);
 		}
         $this->data['parts'] = $parts;
+        $this->data['heads'] = $heads;
+        $this->data['torsos'] = $torsos;
+        $this->data['feet'] = $feet;
 		
 		$this->render(); 
 	}
