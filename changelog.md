@@ -24,6 +24,7 @@ ex: JF: added robot images to the assets folder
 
 
 ### Changed
+- AZ: updated the assembly view to tie buttons with functions in assembly controller and model
 - MG: updated the assembly page to fix the mouseover text, and ensure that only available parts are displayed in the parts section.
 - JF: the logic in the assembly page view and controller for obtaining assembled robots
 - JF: the homepage page to use a database

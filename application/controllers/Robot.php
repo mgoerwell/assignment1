@@ -106,4 +106,26 @@ class Robot extends Application
 		
 		$this->render(); 
 	}
+	
+	/**
+	 * Creates a robot based on the parameters passed in.
+	 * Checks if the right parts have been selected. Then
+	 * calls functions to update database tables appropriatly.
+	 */
+	public function createRobot()
+	{
+		$this->robots->addRobot();
+		$this->index();
+	}
+	
+	/**
+	 * Returns the robort part selected back to main office.
+	 * Then calls function that deletes part from appropriate 
+	 * database table.
+	 */
+	public function returnToOffice()
+	{
+		$this->robots->removeParts();
+		$this->index();
+	}
 }
