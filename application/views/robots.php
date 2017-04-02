@@ -65,7 +65,7 @@
 	        {heads}
 	            <td>
 	            	<span class="headParts">
-						<img src="data/parts/heads/{pic}.jpeg" width="200" title="Model: {model_ID} Type: {type}"/></a>
+						<img src="data/parts/head/{pic}.jpeg" width="200" title="Model: {model_ID} Type: {type}"/></a>
 						<input type="checkbox" name="partCheck">
 					</span>
 				</td>
@@ -87,7 +87,7 @@
 	        {torsos}
 	            <td>
 	            	<span class="bodyParts">
-						<img src="data/parts/torsos/{pic}.jpeg" width="200" title="Model: {model_ID} Type: {type}"/></a>
+						<img src="data/parts/torso/{pic}.jpeg" width="200" title="Model: {model_ID} Type: {type}"/></a>
 						<input type="checkbox" name="partCheck">
 					</span>
 				</td>

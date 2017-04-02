@@ -37,13 +37,13 @@ class Roboparts extends Application
             if ($record['available'] == 0) {
                 continue;
             }
-            
+            $part = $record['part_code'];
             if (strcmp($record['part_type'],"head") == 0) {
-                $heads[] = array('certificate'=> $record['certificate'],'line' => $record['line_type'],'pic' => $record['part_code']);
+                $heads[] = array('certificate'=> $record['certificate'],'line' => $record['line_type'],'pic' => $part, 'model' => strtoupper($part[0]));
             } else if (strcmp($record['part_type'],"torso") == 0) {
-                $torsos[] = array('certificate'=> $record['certificate'],'line' => $record['line_type'],'pic' => $record['part_code']);
+                $torsos[] = array('certificate'=> $record['certificate'],'line' => $record['line_type'],'pic' => $part, 'model' => strtoupper($part[0]));
             } else {
-                $feet[] = array('certificate'=> $record['certificate'],'line' => $record['line_type'],'pic' => $record['part_code']);
+                $feet[] = array('certificate'=> $record['certificate'],'line' => $record['line_type'],'pic' => $part, 'model' => strtoupper($part[0]));
             }
 		}
         
@@ -60,10 +60,19 @@ class Roboparts extends Application
 		$this->data['pagebody'] = 'onepart';
 
 		// build the list of authors, to pass on to our view
-		$source = $this->parts->get($id);
-
+		$source = $this->parts->all();
+        foreach ($source as $record) {
+            if ($record['certificate'] != $id) {
+                continue;
+            }
+            $part = $record['part_code'];
+            $info = array('certificate'=> $record['certificate'],'line' => $record['line_type'],
+            'pic' => $part,'code' => strtoupper($part), 'model' => strtoupper($part[0]),'date' => $record['date_acquired'], 
+            'type' => strtoupper($record['part_type']));
+        } 
+        
         //load part info into page.
-        $this->data = array_merge($this->data, $source);
+        $this->data = array_merge($this->data,$info);
 		$this->render();
         
     }

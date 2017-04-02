@@ -2,9 +2,8 @@
     This is the template for the parts page. It will load in all parts in the Database
     in rows of three
 -->
+
 <link rel="stylesheet" type="text/css" href="/assets/css/assembly.css"/>
-
-
 <h1>Robot Parts</h1>
 <div class="assemblyPartItems">
     <table class="table-responsive">
@@ -17,7 +16,7 @@
             <tr>
             {heads}
                 <td>
-                   <a href="/parts/{certificate}"><img src="/data/parts/heads/{pic}.jpeg" title="Part number: {certificate} Line: {line}"/></a>
+                   <a href="/parts/{certificate}"><img src="/data/parts/head/{pic}.jpeg" title="Model: {model} Line: {line}"/></a>
                 </td>
             {/heads}
             </tr>
@@ -36,7 +35,7 @@
             <tr>
             {torsos}
                 <td>
-                   <a href="/parts/{certificate}"><img src="/data/parts/torsos/{pic}.jpeg" title="Part number: {certificate} Line: {line}"/></a>
+                   <a href="/parts/{certificate}"><img src="/data/parts/torso/{pic}.jpeg" title="Model: {model} Line: {line}"/></a>
                 </td>
             {/torsos}
             </tr>
@@ -55,7 +54,7 @@
             <tr>
             {feet}
                 <td>
-                   <a href="/parts/{certificate}"><img src="/data/parts/feet/{pic}.jpeg" title="Part number: {certificate} Line: {line}"/></a>
+                   <a href="/parts/{certificate}"><img src="/data/parts/feet/{pic}.jpeg" title="Model: {model} Line: {line}"/></a>
                 </td>
             {/feet}
             </tr>
