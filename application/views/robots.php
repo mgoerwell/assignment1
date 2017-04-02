@@ -17,14 +17,37 @@
 	    </thead>
 	    <tbody>
 	        <tr>
-	        	{robots}
+	        	{assembledHeads}
 	            <td>
 	            	<span class="robotItems">
-						<img src="data/bots/{pic}" width="200" title="Model: {model_ID} Type: {type}"/></a>
-						<input type="checkbox" name="robotCheck">
+						<img src="data/parts/head/{pic}.jpeg" width="200" title="Model: {model_ID} Type: {type}"/></a>
 					</span>
 				</td>
-				{/robots}
+				{/assembledHeads}
+        	</tr>
+        	
+	        <tr>
+	        	{assembledTorsos}
+	            <td>
+	            	<span class="robotItems">
+						<img src="data/parts/torso/{pic}.jpeg" width="200" title="Model: {model_ID} Type: {type}"/></a>
+					</span>
+				</td>
+				{/assembledTorsos}
+        	</tr>
+	        <tr>
+	        	{assembledFeet}
+	            <td>
+	            	<span class="robotItems">
+						<img src="data/parts/feet/{pic}.jpeg" width="200" title="Model: {model_ID} Type: {type}"/></a>
+					</span>
+				</td>
+				{/assembledFeet}
+        	</tr>
+        	<tr>
+        		<td align="center">
+	        		<input type="checkbox" name="robotCheck">
+        		</td>
         	</tr>
     	</tbody>
 	</table>

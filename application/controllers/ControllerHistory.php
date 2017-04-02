@@ -30,7 +30,15 @@ class ControllerHistory extends Application
         foreach ($data as $record)
 		{
 			//get the date, type, description, location, cost, and price of every entry.
-			$history[] = array ('date' => $record['date'], 'type' => $record['type'], 'data' => $record['data'], 'location' => $record['location'], 'cost' => $record['cost'], 'price' => $record['price']);
+			$history[] = array ('id'=> $record['id'],
+								'date' => $record['date'], 
+								'time' => $record['time'], 
+								'type' => $record['transaction_type'], 
+								'assembly' => $record['assembly'], 
+								'location' => $record['location'], 
+								'cost' => $record['cost'], 
+								'revenue' => $record['revenue'], 
+								'data' => $record['item_data']);
 		}
 
         $this->data['history'] = $history;
