@@ -1,9 +1,7 @@
 <?php
 
 /**
- * This is a Dummy model for Parts with bogus hard-coded data,
- * so that we don't have to worry about any database setup.
- * This would be considered a "mock database" model.
+ * This is a the model for parts set up to use the actual database.
  *
  * @author matt
  */
@@ -17,12 +15,12 @@ class Parts extends CI_Model {
 	// retrieve all of the parts
 	public function all()
 	{
-        $this->db->order_by("certificate");
+        $this->db->order_by("part_code");
         $query = $this->db->get('parts');
         $data = $query->result_array();
 		return $data;
 	}
-
+    //insert entry into database
     public function insert($data){
         $this->db->insert('parts',$data);
     }

@@ -1,6 +1,5 @@
 <!-- 
-    This is the template for the parts page. It will load in all parts in the Database
-    in rows of three
+    This is the template for the parts page. It will load in all parts in the Database, seperated by part type
 -->
 
 <link rel="stylesheet" type="text/css" href="/assets/css/assembly.css"/>
