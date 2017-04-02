@@ -24,8 +24,8 @@ This file holds the formatting for the view output. -->
             <td>{type}</td>
             <td>{data}</td>
             <td>{location}</td>
-            <td>${cost}.00</td>
-            <td>${price}.00</td>
+            <td>${cost}</td>
+            <td>${price}</td>
         </tr>
         {/history}
     </tbody>

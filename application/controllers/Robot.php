@@ -8,7 +8,6 @@
 */
 
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 class Robot extends Application
 {
 	// Constructor
@@ -24,8 +23,6 @@ class Robot extends Application
 	{
 		// link view
 		$this->data['pagebody'] = 'robots';
-		$role = $this->session->userdata('userrole');
-		$this->data['pagetitle'] = 'Robots ('. $role . ')';
 		
 		// call all() function from robots model
 		$source = $this->robots->all();
@@ -46,51 +43,26 @@ class Robot extends Application
 		// call all() function from parts model
         $source = $this->parts->all();
         $parts = array(); // array to store returned values
+        $heads = array();
+        $torsos = array();
+        $feet = array();
 		
 		// iterate thru each model array element and store values
         foreach ($source as $record)
 		{
-			$parts[] = array ('model' => $record['model'], 'line' => $record['line'], 'pic' => $record['pic'], 'href' => $record['where']);
+			if ($record['part_type'] == 'head') {
+				$heads[] = array ('certificate' => $record['certificate'], 'line' => $record['line_type'], 'pic' => $record['part_code']);
+			} else if ($record['part_type'] == 'torso') {
+				$torsos[] = array ('certificate' => $record['certificate'], 'line' => $record['line_type'], 'pic' => $record['part_code']);
+			} else if ($record['part_type'] == 'feet') {
+				$feet[] = array ('certificate' => $record['certificate'], 'line' => $record['line_type'], 'pic' => $record['part_code']);
+			}
+			$parts[] = array ('certificate' => $record['certificate'], 'line' => $record['line_type'], 'pic' => $record['part_code']);
 		}
         $this->data['parts'] = $parts;
-
-
-        $heads = array(); // array to store returned values
-		
-		// iterate thru each model array element and store values
-        foreach ($source as $record)
-		{
-			if ($record['type'] == 'head') {
-				$heads[] = array ('model' => $record['model'], 'line' => $record['line'], 'pic' => $record['pic'], 'href' => $record['where']);
-			}
-		}
         $this->data['heads'] = $heads;
-
-
-        $bodies = array(); // array to store returned values
-		
-		// iterate thru each model array element and store values
-        foreach ($source as $record)
-		{
-			if ($record['type'] == 'body') {
-				$bodies[] = array ('model' => $record['model'], 'line' => $record['line'], 'pic' => $record['pic'], 'href' => $record['where']);
-			}
-		}
-        $this->data['bodies'] = $bodies;
-
-
-        $feet = array(); // array to store returned values
-		
-		// iterate thru each model array element and store values
-        foreach ($source as $record)
-		{
-			if ($record['type'] == 'feet') {
-				$feet[] = array ('model' => $record['model'], 'line' => $record['line'], 'pic' => $record['pic'], 'href' => $record['where']);
-			}
-		}
+        $this->data['torsos'] = $torsos;
         $this->data['feet'] = $feet;
-
-
 		
 		$this->render(); 
 	}

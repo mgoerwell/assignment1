@@ -15,7 +15,8 @@ Based off lab 4 Routes template
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
         <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>   
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css"/>           
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/css/default.css"/>
 	</head>
 	<body>
         <div id="container">
@@ -29,7 +30,7 @@ Based off lab 4 Routes template
             	<!--input the content information-->
                 {content}
             </div>
-            <footer class="navbar-fixed-bottom">
+            <footer class="footer">
 	            <div class="Container text-center">
 					<p class="text-muted">Page rendered in <strong>{elapsed_time}</strong> seconds. {ci_version}</p>
 				</div>

@@ -5,9 +5,11 @@
 <!-- Link CSS -->	
 <link rel="stylesheet" type="text/css" href="/assets/css/assembly.css"/>
 
+
+<!-- Section to display all available robots-->
 <h1>Robot Assembly</h1>
 <div class="assemblyRobotItems">     
-  <table class="table">
+  <table class="table-responsive">
 	    <thead>
 	        <tr>
 	            <th><h2>Robots</h2></th>
@@ -40,7 +42,7 @@
 	        {heads}
 	            <td>
 	            	<span class="headParts">
-						<img src="data/parts/{pic}" width="200" title="Model: {model_ID} Type: {type}"/></a>
+						<img src="data/parts/{pic}.jpeg" width="200" title="Model: {model_ID} Type: {type}"/></a>
 						<input type="checkbox" name="partCheck">
 					</span>
 				</td>
@@ -59,14 +61,14 @@
 	    </thead>
 	    <tbody>
 	        <tr>
-	        {bodies}
+	        {torsos}
 	            <td>
 	            	<span class="bodyParts">
-						<img src="data/parts/{pic}" width="200" title="Model: {model_ID} Type: {type}"/></a>
+						<img src="data/parts/{pic}.jpeg" width="200" title="Model: {model_ID} Type: {type}"/></a>
 						<input type="checkbox" name="partCheck">
 					</span>
 				</td>
-			{/bodies}
+			{/torsos}
 	        </tr>
 	    </tbody>
   	</table>
@@ -84,7 +86,7 @@
 	        	{feet}
 	            <td>
 	            	<span class="feetParts">
-						<img src="data/parts/{pic}" width="200" title="Model: {model_ID} Type: {type}"/></a>
+						<img src="data/parts/{pic}.jpeg" width="200" title="Model: {model_ID} Type: {type}"/></a>
 						<input type="checkbox" name="partCheck">
 					</span>
 				</td>
@@ -96,6 +98,6 @@
 
 <!-- Defines the two buttons on the webpage -->
 <div class="assemblyButtons">
-	<button type="button">Return to head office</button>
-	<button type="button">Build it</button>
+	<input type="submit" class="btn btn-primary btn-lg" value="Build It">
+	<a href="#" class="btn btn-primary btn-lg" role="button">Return to Head Office</a>
 </div>
