@@ -53,12 +53,16 @@ class Robot extends Application
 		// iterate thru each model array element and store values
         foreach ($sourceParts as $record)
 		{
+            if ($record['available'] == 0) {
+                continue;
+            }
+            $part = $record['part_code'];
 			if ($record['part_type'] == 'head') {
-				$heads[] = array ('certificate' => $record['certificate'], 'line' => $record['line_type'], 'pic' => $record['part_code']);
+				$heads[] = array ('certificate' => $record['certificate'], 'line' => $record['line_type'], 'pic' => $part, 'model' => strtoupper($part[0]));
 			} else if ($record['part_type'] == 'torso') {
-				$torsos[] = array ('certificate' => $record['certificate'], 'line' => $record['line_type'], 'pic' => $record['part_code']);
+				$torsos[] = array ('certificate' => $record['certificate'], 'line' => $record['line_type'], 'pic' => $part, 'model' => strtoupper($part[0]));
 			} else if ($record['part_type'] == 'feet') {
-				$feet[] = array ('certificate' => $record['certificate'], 'line' => $record['line_type'], 'pic' => $record['part_code']);
+				$feet[] = array ('certificate' => $record['certificate'], 'line' => $record['line_type'], 'pic' => $part, 'model' => strtoupper($part[0]));
 			}
 		}
         $this->data['heads'] = $heads;
@@ -74,16 +78,17 @@ class Robot extends Application
 		{
 			foreach ($sourceParts as $partRecord)
 			{
+                $part = $partRecord['part_code'];
 				if ($partRecord['certificate'] == $robotRecord['head_part']) {
-					$assembledHeads[] = array ('id' => $robotRecord['id'], 'pic' => $partRecord['part_code']);
+					$assembledHeads[] = array ('id' => $robotRecord['id'], 'line' => $partRecord['line_type'], 'pic' => $part, 'model' => strtoupper($part[0]));
 				}
 
 				if ($partRecord['certificate'] == $robotRecord['torso_part']) {
-					$assembledTorsos[] = array ('id' => $robotRecord['id'], 'pic' => $partRecord['part_code']);
+					$assembledTorsos[] = array ('id' => $robotRecord['id'], 'line' => $partRecord['line_type'], 'pic' => $part, 'model' => strtoupper($part[0]));
 				}
 
 				if ($partRecord['certificate'] == $robotRecord['leg_part']) {
-					$assembledFeet[] = array ('id' => $robotRecord['id'], 'pic' => $partRecord['part_code']);
+					$assembledFeet[] = array ('id' => $robotRecord['id'], 'line' => $partRecord['line_type'], 'pic' => $part, 'model' => strtoupper($part[0]));
 				}
 			}
 		}
