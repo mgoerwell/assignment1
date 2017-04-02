@@ -74,8 +74,7 @@ class Roboparts extends Application
         
         //load part info into page.
         $this->data = array_merge($this->data,$info);
-		$this->render();
-        
+		$this->render();  
     }
     
     /**

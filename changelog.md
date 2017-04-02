@@ -26,6 +26,7 @@ ex: JF: added robot images to the assets folder
 ### Changed
 - MG: Implemented support for the buy robots button through the api, added history table updates for both parts buttons, updated git ignore for secret tokens
 - MG: Implemented support for the build parts button through the api, updated database to reflect returned array. 
+- AZ: updated the assembly view to tie buttons with functions in assembly controller and model
 - MG: updated the assembly page to fix the mouseover text, and ensure that only available parts are displayed in the parts section.
 - JF: the logic in the assembly page view and controller for obtaining assembled robots
 - JF: the homepage page to use a database
