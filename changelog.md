@@ -6,8 +6,9 @@ Formatting Requirements:
 2) First and last initial, followed by what was changed or added
 ex: JF: added robot images to the assets folder
 
-## [Unreleased]
+## [1.0]
 ### Added
+- AR: added Manage Page, functionality not present
 - JF: Bootstrap to the project for easier styling
 - MG: added default database schema to the /data folder
 - JF: Added a welcome view and controller
