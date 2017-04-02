@@ -4,19 +4,19 @@
 -->
 <div class="partrow">
     {heads}
-        <div class="span4"><a href="/parts/{certificate}"><img src="/data/parts/{pic}.jpeg" title="Part number: {certificate}
+        <div class="span4"><a href="/parts/{certificate}"><img src="/data/parts/{pic}.jpeg" title="Model: {model}
 Line: {line}"/></a></div>
     {/heads}
 </div>
 <div class="partrow">
     {torsos}
-        <div class="span4"><a href="/parts/{certificate}"><img src="/data/parts/{pic}.jpeg" title="Part number: {certificate}
+        <div class="span4"><a href="/parts/{certificate}"><img src="/data/parts/{pic}.jpeg" title="Model: {model}
 Line: {line}"/></a></div>
     {/torsos}
 </div>
 <div class="partrow">
     {feet}
-        <div class="span4"><a href="/parts/{certificate}"><img src="/data/parts/{pic}.jpeg" title="Part number: {certificate}
+        <div class="span4"><a href="/parts/{certificate}"><img src="/data/parts/{pic}.jpeg" title="Model: {model}
 Line: {line}"/></a></div>
     {/feet}
 </div>

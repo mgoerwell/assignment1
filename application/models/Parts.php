@@ -21,8 +21,9 @@ class Parts extends CI_Model {
         $query = $this->db->get('parts');
         $data = $query->result_array();
 		// iterate over the data until we find the one we want
-		foreach ($this->data as $record)
-			if ($record['certificate'] == $which)
+		foreach ($data as $record)
+            $code = $record['certificate'];
+			if ($code == $which)
 				return $record;
 		return null;
 	}
