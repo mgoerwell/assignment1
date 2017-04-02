@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 03, 2017 at 12:37 AM
+-- Generation Time: Apr 03, 2017 at 01:58 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -65,7 +65,8 @@ INSERT INTO `history` (`id`, `date`, `time`, `transaction_type`, `assembly`, `lo
 (20, '2017-01-20', '11:00:00', 'shipment', 'mix', 'Toronto, Canada', 0, 100, 'companion'),
 (21, '2017-01-20', '11:00:00', 'shipment', 'mix', 'New York, US', 0, 50, 'butler'),
 (22, '2017-01-20', '11:00:00', 'shipment', 'full', 'Houston, US', 0, 50, 'A'),
-(23, '2017-01-20', '11:00:00', 'shipment', 'full', 'Venice, Italy', 0, 200, 'W');
+(23, '2017-01-20', '11:00:00', 'shipment', 'full', 'Venice, Italy', 0, 200, 'W'),
+(30, '2017-04-02', '23:23:47', 'purchase', '', 'PRC', 100, 0, 'part_box');
 
 -- --------------------------------------------------------
 
@@ -105,9 +106,9 @@ INSERT INTO `parts` (`certificate`, `line_type`, `part_code`, `part_type`, `date
 
 CREATE TABLE `robots` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `head_part` int(8) NOT NULL,
-  `torso_part` int(8) NOT NULL,
-  `leg_part` int(8) NOT NULL
+  `head_part` varchar(8) NOT NULL,
+  `torso_part` varchar(8) NOT NULL,
+  `leg_part` varchar(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -115,7 +116,7 @@ CREATE TABLE `robots` (
 --
 
 INSERT INTO `robots` (`id`, `head_part`, `torso_part`, `leg_part`) VALUES
-(1, 234289, 234249, 234239);
+(1, '234289', '234249', '234239');
 
 --
 -- Indexes for dumped tables
@@ -149,7 +150,7 @@ ALTER TABLE `robots`
 -- AUTO_INCREMENT for table `history`
 --
 ALTER TABLE `history`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT for table `robots`
 --
