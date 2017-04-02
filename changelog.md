@@ -23,6 +23,7 @@ ex: JF: added robot images to the assets folder
 
 
 ### Changed
+- JF: the history table to be more a robust table which allows for sorting and filtering results
 - JF: Pretty much everything to make it work with bootstrap rather than our original default.css file
 - MG: Updated the parts page to use the database. Ensured this didn't break the assembly page (needs to be reworked anyway). Updated database.
 - MG: updated config to load database. Make sure to include a Development folder
