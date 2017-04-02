@@ -20,7 +20,7 @@
 	        	{assembledHeads}
 	            <td>
 	            	<span class="robotItems">
-						<img src="data/parts/heads/{pic}.jpeg" width="200" title="Model: {model_ID} Type: {type}"/></a>
+						<img src="data/parts/head/{pic}.jpeg" width="200" title="Model: {model_ID} Type: {type}"/></a>
 					</span>
 				</td>
 				{/assembledHeads}
@@ -30,7 +30,7 @@
 	        	{assembledTorsos}
 	            <td>
 	            	<span class="robotItems">
-						<img src="data/parts/torsos/{pic}.jpeg" width="200" title="Model: {model_ID} Type: {type}"/></a>
+						<img src="data/parts/torso/{pic}.jpeg" width="200" title="Model: {model_ID} Type: {type}"/></a>
 					</span>
 				</td>
 				{/assembledTorsos}
