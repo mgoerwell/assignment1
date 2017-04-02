@@ -1,10 +1,25 @@
-<div class="row">
-<!-- Section to display all Business statistics-->
-<h1>Business Statistics</h1>
-    Number of Robots: {robots}</br>
-    Number of Parts: {parts}</br>
-    {economics}
-    	Dollars Spent: ${spent}</br>
-        Profits made: ${profits}</br>
-    {/economics}
+<div class="container">
+  <h2>Business Statistics</h2>         
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <td>Number of Robots</td>
+        <td>{robots}</td>
+      </tr>
+      <tr>
+        <td>Number of Parts</td>
+        <td>{parts}</td>
+      </tr>
+      {economics}
+      <tr>
+        <td>Dollars Spent</td>
+        <td>${spent}</td>
+      </tr>
+      <tr>
+        <td>Profits made</td>
+        <td>${profits}</td>
+      </tr>
+      {/economics}
+    </tbody>
+  </table>
 </div>

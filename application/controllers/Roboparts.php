@@ -24,17 +24,33 @@ class Roboparts extends Application
 	{
         //the view we want shown
 		$this->data['pagebody'] = 'parts';
+		$role = $this->session->userdata('userrole');
+		$this->data['pagetitle'] = 'Parts ('. $role . ')';
         
         //build the list of parts to pass on to the view.
         $source = $this->parts->all();
-        $parts = array();
+        $heads  = array();
+        $torsos = array();
+        $feet   = array();
         foreach ($source as $record)
 		{
-			$parts[] = array ('model' => $record['model'], 'line' => $record['line'], 'pic' => $record['pic'], 'href' => $record['where']);
+            if ($record['available'] == 0) {
+                continue;
+            }
+            
+            if (strcmp($record['part_type'],"head") == 0) {
+                $heads[] = array('certificate'=> $record['certificate'],'line' => $record['line_type'],'pic' => $record['part_code']);
+            } else if (strcmp($record['part_type'],"torso") == 0) {
+                $torsos[] = array('certificate'=> $record['certificate'],'line' => $record['line_type'],'pic' => $record['part_code']);
+            } else {
+                $feet[] = array('certificate'=> $record['certificate'],'line' => $record['line_type'],'pic' => $record['part_code']);
+            }
 		}
         
         //load parts into the page.
-        $this->data['parts'] = $parts;
+        $this->data['heads'] = $heads;
+        $this->data['torsos'] = $torsos;
+        $this->data['feet'] = $feet;
         
 		$this->render(); 
 	}
