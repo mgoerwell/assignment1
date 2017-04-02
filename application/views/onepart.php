@@ -3,15 +3,19 @@
     @author Matt
 -->
 <div class="row">
-        <div class="span3"><img src="/data/parts/{pic}.jpeg" title="{certificate}"/></div>
+        <div class="text-center "><img src="/data/parts/{type}/{pic}.jpeg" title="{certificate}"/></div>
         <div class="span8 offset1">
-            <p class="text-right">
+            <br/>
+            <p class="text-center">
             Associated Model: {model}<br/>
             Associated Robot Type: {line}<br/>
             Part Code: {code}<br/>
             Piece Type: {type}<br/>
             Date Acquired: {date}<br/>
-            Authenticity Code: {certificate}</p><br/>
+            Authenticity Code: {certificate}<br/>
+            <br/>
+            <button onclick="location.href='/parts'" type="button" class = "btn-lg btn-primary">Back</button>
+            </p><br/>
         </div>
-    <button onclick="location.href='/parts'" type="button">Back</button>
+
 </div>

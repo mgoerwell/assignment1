@@ -14,20 +14,6 @@ class Parts extends CI_Model {
 		parent::__construct();
 	}
 
-	// retrieve a single part
-	public function get($which)
-	{
-        $this->db->order_by("certificate");
-        $query = $this->db->get('parts');
-        $data = $query->result_array();
-		// iterate over the data until we find the one we want
-		foreach ($data as $record)
-            $code = $record['certificate'];
-			if ($code == $which)
-				return $record;
-		return null;
-	}
-
 	// retrieve all of the parts
 	public function all()
 	{
