@@ -1,6 +1,5 @@
 <!-- 
-    This is the template for the parts page. It will load in all parts in the Database
-    in rows of three
+    This is the template for the parts page. It will load in all parts in the Database, seperated by part type
 -->
 
 <link rel="stylesheet" type="text/css" href="/assets/css/assembly.css"/>
@@ -60,4 +59,10 @@
             </tr>
         </tbody>
     </table>
+</div>
+
+<!---Defines the two buttons on the webpage -->
+<div class = "partsButtons">
+    <button onclick="location.href='/parts/build'" type="button" class = "btn-lg btn-primary">Build Parts</button>
+    <button onclick="location.href='/parts/box'" type="button" class = "btn-lg btn-primary">Buy More Parts</button>
 </div>

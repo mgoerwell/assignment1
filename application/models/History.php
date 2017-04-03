@@ -21,5 +21,8 @@ class History extends CI_Model {
         $data = $query->result_array();
 		return $data;
 	}
-
+    //insert entry into database
+    public function insert($data){
+        $this->db->insert('history',$data);
+    }
 }
